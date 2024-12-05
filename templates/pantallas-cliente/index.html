@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block customCSS %}
+<link href="{{ url_for('static', filename='css/video-js.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+<main>
+
+    <section id="presentacion-id">     
+            <span class="text-white fst-italic fw-normal mb-4" style="font-size: 16px; max-width: 500px;">"Tienes un momento para crear una experiencia de toda una vida, permítanos guiarlo con paciencia, creatividad, con la ilusión de que su evento será parte de su historia para siempre."</span>   
+            <h2 class="text-white">Cecilia Correa</h2>
+            <a class="btn-inicio1 fw-bold" href="/sobre-mi">ACERCA DE MÍ</a>                     
+    </section>
+
+
+    <div class="container-xxl my-5">
+        <div class="row" data-aos="fade-up">
+            <h2 class="text-center mb-1">¡Comparte estos momentos con nosotros!</h2>
+        </div>
+        <div class="d-flex justify-content-center align-items-start flex-wrap">
+            
+
+            <div class="row col-xxl-6 col-lg-10 col-md-10 col-sm-12 mt-5 p-3">
+                <video id="fm-video" class="mb-4 fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}"  alt="video-1" controls data-aos="fade-up">
+                    <source src=" {{ url_for('static', filename='videos/video-cecilia-2.mp4') }} " type="video/mp4">
+                </video>
+                <h3 class="mb-4" style="font-size: 26px;" data-aos="fade-up">CELEBRACIÓN INOLVIDABLE</h3>
+                <p style="line-height: 2; color: #666666; font-size: 18px;" data-aos="fade-up">Ya sea que te encuentres en Perú o en cualquier parte del mundo, podemos atenderte para que llegues y encuentres todo listo para la celebración, nuestra experiencia trabajando con clientes que viven en diferentes partes del mundo: Japón, Francia, Inglaterra, Brasil, India, y diferentes estados de USA, nos fascina.  Queremos que tu día sea inolvidable y que tus deseos se vean reflejados en el resultado final, nuestro equipo no parará hasta conseguir este objetivo.</p>
+            </div>
+
+            <div class="row col-xxl-6 col-lg-10 col-md-10 col-sm-12 mt-5 p-3">
+                <video id="fm-video" class="mb-4 fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}"  alt="video-1" controls data-aos="fade-down">
+                    <source src=" {{ url_for('static', filename='videos/video-cecilia-1.mp4') }} " type="video/mp4">
+                </video>
+                <h3 class="mb-4" style="font-size: 26px;" data-aos="fade-down">LA PERFECCIÓN EN CADA DETALLE</h3>
+                <p style="line-height: 2; color: #666666; font-size: 18px;" data-aos="fade-down">Para nuestros clientes una de las cosas más importantes es la elección de su vestido de novia. Disfrutamos mucho del proceso de creación, desde el boceto, donde se toma en cuenta los gustos de cada una, escuchando las recomendaciones del diseñador para resaltar su figura y por ello trabajamos de la mano con los mejores profesionales del medio.
+                    Cada diseño es único, los detalles de pedrería, bordados, encajes, telas y la excelente mano de obra harán que el resultado final sea una pieza exquisita que hará que tu mejor versión destaque en ese día tan especial.
+                    </p>
+            </div>
+
+            <div class="row col-xxl-6 col-lg-10 col-md-10 col-sm-12 mt-5 p-3">
+                <!--<video id="fm-video" class="mb-4 fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}"  alt="video-1" controls data-aos="zoom-in">
+                    <source src=" {{ url_for('static', filename='videos/video-cecilia-3.mp4') }} " type="video/mp4">
+                </video>-->
+                <div class="contenedor_img_inicio_a" data-aos="flip-left"><img class="img_abajo_videos_1" src="{{ url_for('static', filename='img/index/img_abajo_videos_1.png') }}" alt="img_previos"></div>
+                <h3 class="mb-4" style="font-size: 26px;" data-aos="zoom-in">¡MÁS DE LO QUE PUEDAS IMAGINAR!</h3>
+                <p style="line-height: 2; color: #666666; font-size: 18px;" data-aos="zoom-in">Nuestro equipo trabajará  para conseguir que el evento deseado refleje al completo el estilo y personalidad de los clientes que nos contratan.
+                     
+                    </p>
+                <p style="line-height: 2; color: #666666; font-size: 18px;" data-aos="zoom-in">Ningún evento es similar a otro, se pone especial atención a la <span style="font-weight: bold; color:black; text-decoration: underline;">personalización</span> y esto es lo que hace que se consiga producir eventos extraordinarios e inolvidables.</p>
+            </div>
+
+        </div>
+    </div>    
+
+    <div class="container-fluid mt-5" style="background-color: #EDF5F7;">
+        <div class="container-xxl py-5">
+            <h2 class="mb-4" controls data-aos="fade-up">Dónde y Cuándo</h2>
+            <div class="d-flex justify-content-center align-items-start flex-wrap">
+                <div class="col-lg-4 col-sm-10 pe-2">
+                    <!--<div class="burbujas-inicio" data-aos="flip-left"><img src="{{ url_for('static', filename='img/balloons.png') }}" alt=""></div>-->
+                    <div class="" data-aos="flip-left"><img class="img_donde_inicio" src="{{ url_for('static', filename='img/index_donde_cuando/donde_cuando_1.png') }}" alt="img_previos"></div>
+                    <h2 class="my-4 sub_donde_991" data-aos="fade-down">LOS PREVIOS DE LA NOVIA</h2>
+                    <p class="me-4" style="text-align: justify; line-height: 2; color:#666666; font-size: 18px;" data-aos="fade-down">Nuestro equipo está siempre atento en cada detalle, verificando que todos los pedidos lleguen a tiempo. Una atención personalizada a la novia es muy importante ya que deben sentirse muy cómodas en una atmósfera de tranquilidad. Trabajando de la mano con los profesionales de maquillaje y peinado, fotógrafos y staff.</p>
+                </div>
+                <div class="col-lg-4 col-sm-10 pe-2">
+                    <!--<div class="burbujas-inicio" data-aos="flip-left"><img src="{{ url_for('static', filename='img/wedding-cake.png') }}" alt=""></div>-->
+                    <div class="" data-aos="flip-left"><img class="img_donde_inicio" src="{{ url_for('static', filename='img/index_donde_cuando/donde_cuando_2.png') }}" alt="img_flores"></div>
+                    <h2 class="mt-4" data-aos="fade-down" style="margin-bottom: 27px;">LAS FLORES</h2>
+                    <p class="me-4" style="text-align: justify; line-height: 2; color:#666666; font-size: 18px;" data-aos="fade-down">El bouquet de la novia es de nuestras partes favoritas, las flores dan ese toque importante para complementar el look nupcial.</p>
+                </div>
+                <div class="col-lg-4 col-sm-10">
+                    <!--<div class="burbujas-inicio" data-aos="flip-left"><img src="{{ url_for('static', filename='img/wedding-rings.png') }}" alt="img_boda"></div>-->
+                    <div data-aos="flip-left"><img class="img_donde_inicio" src="{{ url_for('static', filename='img/index_donde_cuando/donde_cuando_3.png') }}" alt="img_sorpresa"></div>
+                    <h2 class="mt-4" data-aos="fade-down" style="margin-bottom: 22px;">¡SORPRESA!</h2>
+                    <p class="me-4" style="text-align: justify; line-height: 2; color:#666666; font-size: 18px;" data-aos="fade-down">Desde cartas escritas a mano, flores, piezas de joyería, mensajes de video, nos encanta ser cómplices y hacer que cada momento sea único. Cuentan siempre con nosotras para crear la atmósfera y anécdotas inolvidables.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="container-fluid mt-5 mb-1">
+        <div class="container-xxl py-5">
+            <h2 class="text-center mb-5 fw-semibold fs-2" data-aos="fade-down">TESTIMONIOS</h2>
+            <div class="d-flex justify-content-between align-items-center flex-wrap pt-5">
+                <div class="col-lg-4 col-sm-10 mx-auto align-self-start" data-aos="flip-left">
+                    <img class="d-block mx-auto rounded-circle mb-3" src="{{ url_for('static', filename='img/testimonio1.jpeg') }}" alt="" width="150px">
+                    <h3 class="text-center fw-bold">Martín Álvarez Domínguez</h3>
+                    <img class="d-block mx-auto" src="{{ url_for('static', filename='img/5-estrellas.png') }}" alt="" width="120px">
+                    <p class="text-center mt-1 p-4 inicio-testimonios">"Cecilia fue la mejor decisión que tomamos con mi esposa, nos organizó una boda de ensueño con todo lo que buscábamos e incluso mucho más. Se encargó de facilitarnos todo y que no nos preocupáramos por nada, todo espectacular; pero más allá de lo profesional, sentimos todo el cariño que le puso a cada actividad, se involucró bastante que sentimos como si fuera parte de nuestra familia. Fue un excelente servicio y lo recomendamos para cualquier tipo de evento."</p>
+                </div>
+                <div class="col-lg-4 col-sm-10 mx-auto align-self-start" data-aos="flip-left">
+                    <img class="d-block mx-auto rounded-circle mb-3" src="{{ url_for('static', filename='img/testimonio2.jpeg') }}" alt="" width="150px">
+                    <h3 class="text-center comentarios-index-fin fw-bold">Diverbox fotos instantáneas</h3>
+                    <img class="d-block mx-auto" src="{{ url_for('static', filename='img/5-estrellas.png') }}" alt="" width="120px">
+                    <p class="text-center mt-1 p-4 inicio-testimonios">"Amamos trabajar con Ceci en sus bodas, es una Wedding increíble, ve cada detalle para que todo este perfecto y para que sus novios disfruten y no olviden ese día tan especial, algo importante es el gran trato con su equipo de trabajo y sus proveedores. Es toda una profesional y gran persona sin duda."</p>
+                </div>
+                <div class="col-lg-4 col-sm-10 mx-auto align-self-start" data-aos="flip-left">
+                    <img class="d-block mx-auto rounded-circle mb-3" src="{{ url_for('static', filename='img/testimonio3.jpeg') }}" alt="" width="150px">
+                    <h3 class="text-center comentarios-index-fin fw-bold">Gina Macheri Figuerola</h3>
+                    <img class="d-block mx-auto" src="{{ url_for('static', filename='img/5-estrellas.png') }}" alt="" width="120px">
+                    <p class="text-center mt-1 p-4 inicio-testimonios">"Contar con los servicios de Cecilia ha sido pasar del stress a la calma. Una estupenda profesional que además trabaja con los mejores profesionales del mercado. 100% recomendable. Nuestro evento corporativo salió excelente gracias a ella."</p>
+                </div>
+                <div class="col-lg-4 col-sm-10 mx-auto align-self-start" data-aos="flip-left">
+                    <img class="d-block mx-auto rounded-circle mb-3" src="{{ url_for('static', filename='img/testimonio4.jpeg') }}" alt="" width="150px">
+                    <h3 class="text-center comentarios-index-fin fw-bold">Cesar Jhonnatan Horna Saldaña</h3>
+                    <img class="d-block mx-auto" src="{{ url_for('static', filename='img/5-estrellas.png') }}" alt="" width="120px">
+                    <p class="text-center mt-1 p-4 inicio-testimonios">"Excelente profesional, cuidadosa de los detalles, planifica cada uno de las actividades y coordina con todos los involucrados. Siempre está atenta y comunicación con los novios para que se lleve la mejor experiencia. Estamos muy agradecidos y contentos por su valioso trabajo."</p>
+                </div>
+            </div>            
+        </div>
+    </div>-->
+    
+</main>
+
+
+{% endblock %}
+
+{% block customJS %}
+<script src="{{ url_for('static', filename='js/video.min.js') }}"></script>
+<script>
+    var reproductor = videojs('fm', {
+        fluid: true
+    });
+</script>
+{% endblock %}

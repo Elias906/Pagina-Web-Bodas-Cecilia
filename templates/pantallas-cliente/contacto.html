@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block customCSS %}
+<style rel="stylesheet">
+    body.loading{
+    cursor: progress;    
+    /* Otros estilos para mostrar un ícono de carga, como un fondo semi-transparente y un spinner */
+    }
+
+    @media screen and (max-width: 991px) {
+        .change_position{
+            display: flex !important;
+            flex-direction: column-reverse !important;
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        .contacto_img_grande{
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            margin: 0 auto !important;
+            width: 100% !important; /* Asegura que ocupe todo el ancho disponible */
+            max-width: 100% !important; /* Para no exceder el ancho */
+            height: auto !important; /* Ajusta la altura automáticamente */
+        }        
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+
+<section id="presentacion-id-contacto" class="header-pages">         
+    <h2 class="text-white">Contacto</h2>             
+</section>
+
+<div class="container-xxl my-5">
+    <div class="d-flex justify-content-between align-items-center flex-wrap change_position">
+        <div class="col-lg-6 col-sm-12 contacto_img_grande">
+            <img class="d-block mx-auto img-fluid" src="{{ url_for('static', filename='img/contacto/img-contacto.jpg') }}" alt="" data-aos="flip-right" style="width: 100%;">
+        </div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-info">
+                <ul class="mb-0">
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+        <div class="col-lg-6 col-sm-12">
+            <form id="formulario" class="formulario-contacto" action="" method="POST">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">   
+
+                <div class="d-flex flex-column">
+                    <h2 class="mb-2" style="font-size: 22px; font-weight: bold;" data-aos="fade-up">¡Contáctanos!</h2>
+                    <span class="mb-2" style="color: #666666; font-size: 20px;" data-aos="fade-up">¡Únete nuestra comunidad!</span>
+                    <span style="color: #666666; font-size: 18px;" data-aos="fade-up">Esperamos poder compartir momentos memorables y celebrar juntos el AMOR</span>
+                </div>
+
+                <div class="d-flex flex-column mt-3 grupo-contacto">
+                    <input type="text" id="nombres" name="nombres" placeholder="Nombres" pattern="^[a-zA-ZáéíóíÁÉÍÓÚ\s]+$" minlength="3" required style="padding-left: 10px;">
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" pattern="^[a-zA-ZáéíóíÁÉÍÓÚ\s]+$" minlength="3" required style="padding-left: 10px;">
+                    <input type="text" id="celular" name="celular" placeholder="Teléfono/Celular" pattern="^[0-9]+$" minlength="9" maxlength="9" required style="padding-left: 10px;">
+                    <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required style="padding-left: 10px;">
+                    <textarea id="mensaje" name="mensaje" id="" cols="30" rows="2" placeholder="Mensaje" required style="padding-left: 10px; resize: none;"></textarea>            
+                </div>
+                <input class="grupo-contacto-boton fw-bold" id="enviarMensaje" type="submit" value="Enviar mensaje" style="font-size: 22px;">
+                <div class="mensajes-error" id="mensajes-error"></div>
+            </form>  
+        </div>
+          
+    </div>    
+</div>
+
+<!-- Código script -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{{ url_for('static', filename='js/contacto.js') }}"></script>
+
+{% block customJS %}
+{% endblock %}
+
+
+{% endblock %}

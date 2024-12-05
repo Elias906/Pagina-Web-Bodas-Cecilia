@@ -1,0 +1,576 @@
+/* @font-face {
+  font-family: 'Poppins Serif';  
+  src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lora Serif';
+  src: url('../fonts/Lora/static/Lora-Regular.ttf') format('truetype');
+}
+*/
+@font-face{
+  font-family: 'EBGaramond';
+  src: url('../fonts/EBGaramond/EBGaramond-Regular.ttf') format('truetype');
+}
+
+*{
+  font-family: 'EBGaramond', sans-serif !important;  
+}
+
+*::selection{
+  color: white;
+  background-color: #000;
+}
+
+.img_abajo_videos_1{
+  max-width: 450px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.contenedor_img_inicio_a{
+  display: flex;
+  justify-content: center;
+}
+
+/* SOBRE MI */
+.sobremi-parrafo-cecilia{
+  text-align: justify; line-height: 2; color: #666666; font-size: 16px;
+}
+
+.nosotros-cecilia{
+  padding-right: 16px;
+}
+
+
+@media screen and (max-width: 446px) {
+  .nosotros-cecilia{
+    padding: 0;
+  }
+
+  .nosotros-todos{
+    padding: 0;
+  }
+}
+
+/* INICIO VIDEOS */
+
+.fm-video{
+  width: 100%;
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,.5);
+}
+
+.fm-video .vjs-control-bar{
+  background: #F3F3F3;
+  color: black;
+}
+
+.fm-video .vjs-play-progress,
+.fm-video .vjs-volume-level{
+  background-color: black;
+}
+
+.video-js:hover .vjs-big-play-button{
+  background: rgba(0,0,0,.2);        
+}
+
+.fm-video .vjs-big-play-button{
+  background: rgba(0,0,0,.2);
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 100%;
+  border: none;
+}
+
+.fm-video .vjs-big-play-button:hover{
+  background: rgba(0,0,0,.5);
+}
+
+/* **************************************** */
+
+
+
+.nav li a{
+  font-size: 16px;
+}
+
+.nav .nav-item .nav-link{
+  padding-left: 0;
+  padding-right: 0;
+  margin: 8px 16px;
+}
+
+.barra1{  
+  color: #333333;  
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;  
+  border-bottom: 1px solid white;
+  animation: bottomToTop 4s ease-in-out infinite;
+  /* transition: bottomToTop transform 2s; */
+  
+}
+
+.barra1:hover{
+  color: #333333;  
+  border-bottom: 1px solid #333333;  
+  /* transform: translateY(-5px); */
+}
+
+.barra1:active,
+.barra1:focus,
+.barra1:link{
+  color: #333333;   
+}
+
+.icon-enl:hover{
+  transition: transform 0.5s;
+}
+
+.icon-enl:hover{
+  transform: scale(1.2);
+}
+
+.icon-enl:not(:hover){
+  transition: transform 1s ease;
+  transform: scale(1);
+}
+
+/* INDEX */
+
+#presentacion-id{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)
+  )
+  ,url("../img/inicio-wedding1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#presentacion-id h2{
+  font-size: 123.14px; 
+  font-family: 'Lora Serif', serif;
+}
+
+#presentacion-id-contacto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;    
+  height: 50vh;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)
+  )
+  ,url("../img/inicio-wedding1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0px;  
+}
+
+.btn-inicio1{
+  color:white;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 11px 19px;
+  border: 2px solid #DADADA;
+  font-weight: bolder;
+  font-size: 15px;
+  margin-top: 45px;
+  transition: transform 0.8s;
+}
+
+.btn-inicio1:hover{  
+  background-color: black;
+  border: 2px solid black;  
+  transform: scale(1.05);
+}
+
+.txtFooter{
+  color: #666666;
+  font-size: 17px;  
+}
+
+/* Inicio imagenes */
+.img_donde_inicio{
+  max-width: 350px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media screen and (max-width: 991px) {
+  .sub_donde_991{
+    margin-bottom: 66px !important;
+  }  
+}
+
+/* Inicio burbujas */
+.burbujas-inicio{
+  background-color: white;
+  padding: 30px;
+  border-radius: 50%;  
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  width: 120px;
+  transition: transform 0.5s;
+}
+
+.burbujas-inicio:hover{
+  transform: translateY(-5px);
+}
+
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #f8f9fa;
+}
+
+.progress-bar {
+  background-color: #007bff;
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Sección de testimonio */
+.inicio-testimonios{
+  font-style: italic; 
+  font-size: 15px; 
+  color:#666666; 
+  font-weight: 600; 
+  line-height: 2;
+}
+
+/* Línea de Wedding Planner */
+.linea-wedding p{
+  display: inline-block;
+  position: relative;
+}
+
+.linea-wedding p::after, .linea-wedding p::before{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 1px;
+  background-color: white;
+  top: 8px;
+}
+
+.linea-wedding p::before{
+  left: -55px;
+}
+
+.linea-wedding p::after{
+  right: -55px;
+}
+
+/* Línea vertical en wedding Planner */
+.footer-linea-vertical {
+  position: relative;
+}
+
+.footer-linea-vertical::after {
+  content: "";
+  position: absolute;
+  top: -35px;
+  right: 30px;
+  width: 3px;
+  height: 150px;
+  background: linear-gradient(to top, rgba(204, 178, 121, 0) 0%, rgba(204, 178, 121, 1) 50%, rgba(204, 178, 121, 0) 100%);
+}
+
+/* FOOTER UNA PARTE */
+.footer-principal{
+  background-color: rgb(168,168,168);
+  padding: 60px 180px;
+}
+
+.footer-final{
+  padding: 5px;
+  font-size: 6px !important;
+}
+
+.footer-final span{
+  color:#666666; 
+  font-size: 14px;
+  
+}
+
+/* ---- */
+
+/* ******************************* HEADER PAGES ********************************************* */
+.header-pages h2{
+  font-size: 80px;
+}
+
+/* ****************************************************************************************** */
+.grupo-contacto input{
+  margin-bottom: 30px;
+  padding: 20px 0px;
+  border: none;
+  border-bottom: 1px solid #DADADA;
+}
+
+.grupo-contacto input:focus{
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.grupo-contacto textarea{
+  margin-bottom: 30px;
+  padding: 20px 0px;
+  border: none;
+  border-bottom: 1px solid #DADADA;
+}
+
+.grupo-contacto textarea:focus{
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.grupo-contacto-boton{  
+  color:black;  
+  background-color: transparent;
+  padding: 10px 19px;
+  border: 2px solid #DADADA;
+  font-size: 15px;
+  margin-top: 35px;
+  transition: transform 0.8s;
+}
+
+.grupo-contacto-boton:hover{  
+  color: white;
+  background-color: black;
+  border: 2px solid black;  
+  transform: scale(1.05);
+}
+
+/* Planes sobre mí cuadros */
+.planes-sobre-mi{
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.7s;
+}
+
+.planes-sobre-mi:hover{
+  transform: translateY(-10px);
+}
+
+.btnEscribenosPlanes{
+  font-size: 20px;
+}
+
+
+#menu-toggle{
+  display: none;
+}
+
+.menu-icon{
+  display: none;  
+}
+
+/* Menú de barras */
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+    cursor: pointer;
+  }
+  .menu-icon {
+    display: block;    
+    cursor: pointer;
+  }
+  .bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 4px;
+    background-color: black;    
+    transition: background-color 0.6s ease;
+  }
+
+  .navbar-ch{
+    flex-wrap: wrap;
+    flex-direction: column-reverse;    
+  }
+  
+  /* Modificación para ocultar el input checkbox */
+  #menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos para mostrar el ícono de barras */
+  .menu-icon:before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 10px;
+    margin-bottom: 4px;
+    background-color: black;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+  }
+  
+  #menu-toggle:checked ~ .nav {
+    display: block;
+    margin-top: 5px;
+  }
+  
+  #menu-toggle:checked ~ .menu-icon:before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  #menu-toggle:checked ~ .menu-icon:after {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* Botón wsp */
+.btn-wsp{
+  position:fixed;
+  width:60px;
+  height:60px;
+  line-height: 63px;
+  bottom:25px;
+  right:25px;
+  background:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:35px;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  z-index:100;
+  transition: all 300ms ease;
+}
+
+.mobile-gallery-desktop{
+  margin-bottom: 30px;
+}
+
+.divisor-medio-gallery{
+  margin-bottom: 30px;
+}
+
+.btn-wsp:hover{
+  text-decoration: none;
+  color: #0df053;
+  background: #fff;
+}
+
+/* ********************** CONTACTO ************************************* */
+.formulario-contacto{
+  padding: 30px;
+  margin: 30px;
+}
+/* ********************************************************************* */
+
+@media screen and (max-width: 445px){  
+  .footer-principal{
+    padding: 60px 10px;
+  }
+
+  #presentacion-id h2{
+    font-size: 60px; 
+  }
+
+  .footer-final span{   
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .header-pages h2{
+    font-size: 40px;
+  }
+
+  .formulario-contacto{
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+@media only screen and (min-width:320px) and (max-width:768px){
+  .btn-wsp{
+      width:63px;
+      height:63px;
+      line-height: 66px;
+}
+}
+
+@media(max-width: 992px){
+  .comentarios-index-fin{
+    margin-top: 60px;
+  }
+
+  .mobile-gallery-desktop{
+    margin-bottom: 0px;
+  }
+
+  .mobile-gallery-cellphone{
+    margin-bottom: 30px;
+  }
+
+  .divisor-medio-gallery{
+    margin-bottom: 0px;
+  }
+}
+
+
+.footer-contacto{
+  text-align: start;
+}
+
+@media(max-width: 1399px){
+
+  .nosotros-cecilia{
+    padding: 30px;
+  }
+
+  .nosotros-todos{
+    padding: 30px;
+  }
+
+  .footer-linea-vertical {
+    position: relative;
+  }
+  
+  .footer-linea-vertical::after {
+    content: "";
+    position: relative;
+    top: 85px;
+    right: 340px;
+    width: 350px;
+    height: 3px;
+    background: linear-gradient(to top, rgba(204, 178, 121, 0) 0%, rgba(204, 178, 121, 1) 50%, rgba(204, 178, 121, 0) 100%);
+  }
+
+  .footer-contacto{
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .footer-contacto-redes{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+
+}
+
+

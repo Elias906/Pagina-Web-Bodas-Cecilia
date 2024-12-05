@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block title %}Galería{% endblock %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/galeria.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<section id="presentacion-id-contacto" class="header-pages">         
+    <h2 class="text-white">Galería</h2>             
+</section>
+
+<div class="container" id="galeria">
+    <h2 class="ms-0 ps-0 mt-4 mb-4" data-aos="fade-down">Galería de Imágenes</h2>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-1.jpg') }}" class="img-fluid" alt="Imagen 1" onclick="expandImage(this)">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-2.jpg') }}" class="img-fluid" alt="Imagen 2" onclick="expandImage(this)">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-3.jpg') }}" class="img-fluid" alt="Imagen 3" onclick="expandImage(this)">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-4.jpg') }}" class="img-fluid" alt="Imagen 4" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-5.jpg') }}" class="img-fluid" alt="Imagen 5" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-6.jpg') }}" class="img-fluid" alt="Imagen 6" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-7.jpg') }}" class="img-fluid" alt="Imagen 7" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-8.jpg') }}" class="img-fluid" alt="Imagen 8" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-9.jpg') }}" class="img-fluid" alt="Imagen 9" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-10.jpg') }}" class="img-fluid" alt="Imagen 10" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-11.jpg') }}" class="img-fluid" alt="Imagen 11" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-12.jpg') }}" class="img-fluid" alt="Imagen 12" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-13.jpg') }}" class="img-fluid" alt="Imagen 13" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-14.jpg') }}" class="img-fluid" alt="Imagen 14" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-15.jpg') }}" class="img-fluid" alt="Imagen 15" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-16.jpg') }}" class="img-fluid" alt="Imagen 16" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-17.jpg') }}" class="img-fluid" alt="Imagen 17" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-18.jpg') }}" class="img-fluid" alt="Imagen 18" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-19.jpg') }}" class="img-fluid" alt="Imagen 19" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-20.jpg') }}" class="img-fluid" alt="Imagen 20" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-21.jpg') }}" class="img-fluid" alt="Imagen 21" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-22.jpg') }}" class="img-fluid" alt="Imagen 22" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-23.jpg') }}" class="img-fluid" alt="Imagen 23" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-24.jpg') }}" class="img-fluid" alt="Imagen 24" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-25.jpg') }}" class="img-fluid" alt="Imagen 25" onclick="expandImage(this)" loading="lazy">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{{ url_for('static', filename='image-gallery/galeria-26.jpg') }}" class="img-fluid" alt="Imagen 26" onclick="expandImage(this)" loading="lazy" style="object-position: center;">
+      </div>
+    </div>
+    
+    <div id="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-image" src="" alt="Imagen ampliada">
+    </div>    
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block customJS %}
+
+<script src="{{ url_for('static', filename='js/galeria.js') }}"></script>
+{% endblock %}
